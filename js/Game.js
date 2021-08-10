@@ -149,7 +149,7 @@ class Game {
         var currentLife = allPlayers[plr].life
         if (currentLife<= 0){
           cars[index-1].changeImage("boom")
-          cars[index-1].scale(0.3)
+          cars[index-1].scale = 0.3
         }
 
         cars[index - 1].position.x = x;
@@ -376,6 +376,7 @@ class Game {
         if (player.life>0){
           player.life -= 185/4
         }
+        player.update()
       }
     }
     if (index == 2){
@@ -388,6 +389,7 @@ class Game {
         if (player.life>0){
           player.life -= 185/4
         }
+        player.update()
       }
     }
   }
